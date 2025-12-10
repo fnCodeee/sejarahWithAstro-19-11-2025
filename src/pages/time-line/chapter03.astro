@@ -1,0 +1,99 @@
+---
+import "../../assets/styles/global.css";
+import Navbar from "../../components/BackNavbar.astro";
+import img06 from "../../assets/images/img-06.png";
+import chapter03 from "/assets/videos/chapter03.mp4";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21 Mei 1998</title>
+  </head>
+  <body>
+    <Navbar/>
+    <section id="section-3">
+      <div>
+
+        <div class="top-box red-background">
+          <span>ch. 3</span>
+          <h1>21 Mei 1998</h1>
+          <p>Soeharto Lengser, Era Baru Dimulai</p>
+        </div>
+
+        <div class="section-p">
+          <div class="section_img_wrapper">
+          <img src={img06.src} alt="" />
+        </div>
+
+          <div class="section-main-3">
+            <div class="main_3">
+              <h2>SOEHARTO LENGSER, ERA BARU DIMULAI</h2>
+              <p class="description">
+                Setelah 32 tahun berkuasa, Soeharto akhirnya mengumumkan
+                pengunduran dirinya. Tangis dan sorak bercampur di jalan-jalan
+                ibu kota — menandai lahirnya era baru yang disebut “Reformasi”.
+                Rakyat menaruh harapan besar pada masa depan demokrasi
+                Indonesia.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Template Materi -->
+        <div class="materi_directed">
+          <div class="content_directed">
+            <h1 class="arges-font">“REFORMASI 1998: TRANSFORMASI INDONESIA PASCA KRISIS”</h1>
+
+            <p class="isi-materi">
+              Reformasi 1998 merupakan titik balik penting dalam sejarah
+              Indonesia yang muncul setelah negara mengalami krisis ekonomi dan
+              politik yang sangat berat. Krisis moneter Asia tahun 1997
+              menyebabkan nilai rupiah terjun bebas, harga-harga kebutuhan pokok
+              meningkat, dan banyak sektor usaha mengalami kebangkrutan. Situasi
+              ini menimbulkan keresahan dan ketidakstabilan di masyarakat, serta
+              memperlihatkan kelemahan mendasar dalam sistem pemerintahan Orde
+              Baru yang dipimpin oleh Soeharto. Di tengah tekanan ekonomi yang
+              semakin memburuk, tuntutan perubahan muncul dari berbagai lapisan
+              masyarakat, terutama mahasiswa. Gerakan mahasiswa yang tersebar di
+              seluruh Indonesia menuntut dilakukannya reformasi total untuk
+              mewujudkan pemerintahan yang lebih transparan, demokratis, dan
+              bebas dari praktik korupsi, kolusi, serta nepotisme. Demonstrasi
+              besar-besaran yang mereka lakukan menunjukkan ketidakpuasan publik
+              terhadap kekuasaan yang terpusat dan kurangnya ruang kebebasan
+              politik.
+            </p>
+
+            <p class="isi-materi">
+              Puncak ketegangan terjadi setelah Tragedi Trisakti pada 12 Mei
+              1998, ketika empat mahasiswa kehilangan nyawa saat melakukan aksi
+              protes. Peristiwa ini memicu gelombang reaksi yang lebih luas dan
+              memperburuk kondisi politik serta keamanan nasional. Kerusuhan
+              sosial yang terjadi di beberapa kota besar semakin melemahkan
+              posisi pemerintah. Dukungan terhadap Soeharto pun terus menurun,
+              hingga akhirnya pada 21 Mei 1998 ia menyatakan pengunduran dirinya
+              setelah lebih dari tiga dekade berkuasa. Lengsernya Soeharto
+              membuka babak baru dalam perjalanan bangsa, yaitu Era Reformasi.
+              Pada masa ini, Indonesia mulai menjalankan berbagai perubahan
+              penting: kebebasan pers diperluas, pemilu yang lebih demokratis
+              diselenggarakan, partai-partai politik baru bermunculan, dan
+              kekuasaan eksekutif dibatasi melalui amandemen konstitusi.
+              Reformasi 1998 menjadi awal dari transformasi besar yang membawa
+              Indonesia menuju sistem pemerintahan yang lebih terbuka,
+              akuntabel, dan berpihak pada prinsip-prinsip demokrasi modern.
+            </p>
+
+            <section>
+              <div class="image-box">
+                <video src={chapter03} autoplay loop muted></video>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -8,8 +8,7 @@ export default defineConfig({
         '127.0.0.1',
         // tambahkan semua subdomain ngrok-free.app (all diizinkan)
         // atau kalau mau spesifik satu aja
-        'bc858e49c8bd.ngrok-free.app',
-        '54c9e370bfd4.ngrok-free.app'
+        'f4d7ef4bfde2.ngrok-free.app',
       ]
     }
   }

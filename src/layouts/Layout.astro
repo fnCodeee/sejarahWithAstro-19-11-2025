@@ -1,6 +1,5 @@
 ---
 import "../assets/styles/global.css";
-// import AOS from 'aos';
 ---
 
 <!doctype html>
@@ -12,18 +11,14 @@ import "../assets/styles/global.css";
 
     <meta name="generator" content={Astro.generator} />
     <title>1998</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <slot />
-    <script>
-      import AOS from "aos";
-      AOS.init();
-    </script>
 
     <!-- <script is:client src="../scripts/main.js"></script> -->\
-    <script is:client>
+    <script is:client type="module">
+      import { initMusicPlayer } from "/scripts/musicPlayer.js";
+
       // LOAD DATA
       import("/data/data.js").then(({ default: data }) => {
         const timeLineWrapper = document.getElementById("time_line");
@@ -89,15 +84,16 @@ import "../assets/styles/global.css";
         });
 
         // MUSIC BUTTON
-        document
-          .getElementById("trigger-music")
-          .addEventListener("click", () => {
-            window.toggleMusic && window.toggleMusic();
-          });
+        initMusicPlayer("/assets/sound/belumTentu.mp3");
+        const musicButton = document.getElementById("trigger-music");
+        musicButton.addEventListener("click", () => {
+          window.toggleMusic && window.toggleMusic();
+        });
       });
     </script>
 
-    <script is:client type="module" src="../scripts/playMusic.js"></script>
+    <!-- <script is:client type="module" src="../scripts/playMusic.js"></script> -->
+     <!-- <script is:client src="/scripts/NavigationTimeline.js"></script> -->
   </body>
 </html>
 
@@ -109,3 +105,21 @@ import "../assets/styles/global.css";
     height: 100%;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import Lenis from "lenis";
+
+  gsap.registerPlugin(ScrollTrigger);
+  document.addEventListener("DOMContentLoaded", () => {
+    const lenis = new Lenis();
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+  });
+</script>
+
+<script></script>

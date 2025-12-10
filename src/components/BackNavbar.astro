@@ -1,0 +1,10 @@
+<button id="back-button" class="hero-btn">
+  <img style="width: 24px;" src="/assets/icon/arrow-left.svg" alt="" />
+</button>
+
+<script is:client>
+  const backButton = document.getElementById("back-button");
+  backButton.addEventListener("click", () => {
+    window.history.back();
+  })
+</script>

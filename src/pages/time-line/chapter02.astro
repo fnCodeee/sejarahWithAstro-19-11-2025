@@ -1,0 +1,98 @@
+---
+import "../../assets/styles/global.css";
+import Navbar from "../../components/BackNavbar.astro";
+import img05 from "../../assets/images/foto-05.jpeg";
+// import chapter02 from "/assets/videos/chapter02.mp4";
+import chapter03 from "/assets/videos/chapter03.mp4";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mei 1998</title>
+  </head>
+  <body>
+    <Navbar />
+    <section id="sec-2">
+      <div>
+        <div class="top-box red-background">
+          <!-- Button  -->
+          <span>ch.2</span>
+          <h1>Mei 1998</h1>
+          <p>Puncak Aksi dan Tragedi</p>
+        </div>
+
+        <div class="bottom-box content">
+          <div class="left_alisya">
+            <h1 class="arges-heading text-kronologi">
+              PUNCAK AKSI DAN TRAGEDI
+            </h1>
+            <p class="text-kronologi">
+              Demonstrasi mahasiswa dan rakyat membesar diberbagai kota. Tragedi
+              trisakti pada 12 Mei menewaskan empat mahasiswa, memicu gelombang
+              amarah diseluruh negeri. Aksi solidaritas merebak, gedung DPR/MPR
+              dikuasai mahasiswa, dan tekanan terhadap soeharto mecapai
+              puncaknya.
+            </p>
+          </div>
+
+          <div class="right_alisya gray-background">
+            <img src={img05.src} alt="" />
+          </div>
+        </div>
+
+        <!-- Template Materi -->
+        <div class="materi_directed">
+          <div class="content_directed">
+            <h1 class="arges-font">“MEI 1998: PUNCAK AKSI DAN TRAGEDI”</h1>
+
+            <p class="isi-materi">
+              Memasuki bulan Mei 1998, gelombang demonstrasi mahasiswa dan
+              masyarakat mencapai titik paling menentukan dalam perjalanan
+              krisis politik Indonesia. Situasi ekonomi yang terus memburuk
+              sejak tahun sebelumnya mendorong semakin banyak kampus dan
+              kelompok masyarakat turun ke jalan, menuntut perubahan besar dalam
+              pemerintahan Orde Baru. Setiap kota menjadi ruang suara publik,
+              sementara mahasiswa tampil sebagai penggerak utama yang
+              menyuarakan pentingnya reformasi, keadilan, serta perbaikan sistem
+              yang dianggap tidak lagi mampu menampung aspirasi rakyat.
+            </p>
+
+            <p class="isi-materi">
+              Di tengah meningkatnya intensitas aksi, tragedi memilukan terjadi
+              pada 12 Mei 1998 di Universitas Trisakti. Empat mahasiswa gugur
+              setelah aparat keamanan melepaskan tembakan terhadap massa aksi.
+              Peristiwa ini mengguncang seluruh negeri, memicu duka mendalam
+              sekaligus kemarahan yang meluas. Tragedi Trisakti tidak hanya
+              menjadi simbol pengorbanan dalam perjuangan reformasi, tetapi juga
+              menjadi pemantik ledakan protes yang lebih besar. Dalam hitungan
+              jam, solidaritas dari berbagai kampus dan kelompok masyarakat
+              bermunculan, memperlihatkan bahwa tuntutan perubahan telah menjadi
+              suara bersama bangsa.
+            </p>
+
+            <p class="isi-materi">
+              Gelombang aksi yang semakin tak terbendung membuat ribuan
+              mahasiswa bergerak menduduki Gedung DPR/MPR sebagai bentuk tekanan
+              politik yang nyata. Kehadiran mereka di pusat kekuasaan nasional
+              menunjukkan bahwa kepercayaan publik terhadap pemerintah telah
+              runtuh. Situasi negara berada pada titik genting, dan tekanan
+              terhadap Presiden Soeharto mencapai puncaknya. Rangkaian peristiwa
+              di bulan Mei ini menjadi momen penentu yang mempercepat runtuhnya
+              kekuasaan Orde Baru dan membuka jalan bagi babak baru dalam
+              sejarah Indonesia.
+            </p>
+
+            <section>
+              <div class="image-box">
+                <video src={chapter03} autoplay loop muted></video>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

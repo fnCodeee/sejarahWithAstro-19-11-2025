@@ -1,3 +1,27 @@
+@import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended+Bold);
+@font-face {
+  font-family: "Monument Extended Bold";
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot");
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.svg#Monument Extended Bold")
+      format("svg");
+}
+
+:root {
+  --red: #e8465e;
+  --cream: #f1eada;
+  --green: #10935b;
+  --grey: #d9d9d9;
+  --black: #101010;
+}
+
 @font-face {
   font-family: "arges";
   src: url(../font/arges-variable-wght-wdth-slnt.ttf) format("truetype");
@@ -23,16 +47,13 @@
 html {
   scroll-behavior: smooth;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #f1eada;
-}
-
-:root {
-  --red: #e8465e;
-  --cream: #f1eada;
-  --green: #10935b;
-  --black: #101010;
 }
 
 /* section home & Latar belakang */
@@ -50,7 +71,7 @@ body {
   padding: 32px 0;
   justify-content: center;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   /* -webkit-backdrop-filter: blur(10px); */
 }
 .navbar ul {
@@ -58,15 +79,20 @@ body {
   display: flex;
   gap: 64px;
 }
-.navbar a{
+.navbar a {
   text-decoration: none;
   font-family: "PPmori";
   color: #0d0d0d;
   font-weight: 600;
+  mix-blend-mode: difference;
 }
 .navbar > ul > li {
   list-style: none;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.img-container-01 {
+  overflow: hidden;
 }
 
 .heading-hero {
@@ -109,19 +135,40 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
-
-.img-container img:first-child {
+.img-about {
+  margin-bottom: 100px;
+}
+.img-about img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-container_img-nya-02 {
+  width: 371px;
+  height: 413px;
+  position: relative;
+  overflow: hidden;
+}
+.img-container_img-nya-01 {
   margin-right: -24px;
   z-index: 100;
-  width: auto;
+  width: 168px;
+  height: 246px;
+  position: relative;
+  overflow: hidden;
 }
 
-.img-container_img-nya-03{
-  width: auto;
-} .img-container_img-nya-03{
+.img-container_img-nya-03 {
+  width: 171px;
   margin-left: 24px;
-  width: auto;
+  height: 221px;
+  position: relative;
+  overflow: hidden;
 }
 
 .lb-paragraf {
@@ -236,8 +283,9 @@ body {
   justify-content: space-between;
   text-align: center;
   height: 100vh;
-  padding-bottom: 64px;
-  padding-top: 64px;
+  padding-bottom: 36px;
+  padding-top: 36px;
+  min-width: 100vw;
 }
 
 .red-background {
@@ -289,6 +337,7 @@ body {
 .bottom-box {
   display: flex;
   height: 100vh;
+  min-width: 100vw;
   background-color: var(--black);
 }
 
@@ -300,7 +349,8 @@ body {
   height: 90%;
   width: 70%;
   color: var(--cream);
-  padding: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .right_alisya {
@@ -359,12 +409,24 @@ body {
 }
 
 .section-p {
-  height: 110vh;
+  background-color: var(--black);
+  height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
 .section_img_wrapper {
   width: 100%;
   height: 60%;
   overflow: hidden;
+}
+
+.wrapper-img-sec3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10%;
 }
 
 .section_img_wrapper img {
@@ -375,7 +437,9 @@ body {
 }
 
 .section-main-3 {
-  background-color: var(--black);
+  display: flex;
+  /* justify-content: space-between; */
+  position: relative;
   padding: 64px;
   height: 100%;
 }
@@ -418,11 +482,14 @@ body {
   font-size: 32px;
   line-height: 34px;
   font-weight: 400;
+  width: 70%;
 }
 
 /*  */
 .container-2 {
   height: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .hero h1 {
@@ -445,6 +512,7 @@ body {
 .content_section-2 {
   display: flex;
   height: 100vh;
+  min-width: 100vw;
 }
 
 .left-2 {
@@ -562,16 +630,21 @@ body {
 /* ABIZAR CSS */
 .section_jeki {
   width: 100%;
-  text-align: center;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+}
+.h-screen {
+  height: 100vh;
 }
 
 .header_jeki {
-  height: 100vh;
   background-color: #e8465e;
-  /* Warna merah sesuai desain */
   display: flex;
-  width: 100%;
+  width: 100vw;
+  flex-shrink: 0;
   align-items: center;
 }
 
@@ -613,10 +686,14 @@ body {
 }
 
 .content_jeki {
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   background-color: #f9f5ee;
   display: flex;
+  /* height: 100vh; */
+  width: 100vw;
+  flex-shrink: 0;
   justify-content: center;
+  position: relative;
 }
 
 .content_wrapper_jeki_spacing {
@@ -628,14 +705,13 @@ body {
 }
 
 .text_jeki {
-  width: 100%;
   font-family: "PPMori", sans-serif;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 42px;
   line-height: 49px;
   text-align: center;
   margin: 0px auto;
-  max-width: 900px;
+  max-width: 990px;
 }
 
 .images_jeki {
@@ -818,6 +894,118 @@ hr {
   width: 85%;
 }
 
+.sec-2 {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.sec-3 {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/* --- SCROLL HORIZONTAL KHUSUS DESKTOP --- */
+.kronologi-scroll-desktop {
+  /* display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 100%; */
+  overflow: hidden;
+  height: 100vh;
+}
+
+.kronologi-inner {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.kronologi-inner > section {
+  width: 200vw;
+  height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Direct time line */
+
+.custom-cursor-css {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  mix-blend-mode: difference;
+  transition: 0.1s;
+  width: auto;
+  height: 64px;
+  padding: 24px;
+  border-radius: 100%;
+  display: none;
+  align-items: center;
+  font-family: "Monument Extended Bold";
+  color: red;
+  font-size: 12px;
+  letter-spacing: 4px;
+  padding: 32px 16px;
+}
+
+.materi_directed {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--cream);
+  box-sizing: border-box;
+  padding: 64px;
+  color: var(--black);
+}
+
+.arges-font {
+  font-family: "arges";
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.isi-materi {
+  font-size: 24px;
+  font-family: "PPmori";
+}
+
+.content_directed {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.image-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+
+
+.chapter04-video {
+  height: 340px !important;
+}
+
+#back-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+}
 /* Tokoh && direct CSS */
 @media (max-width: 768px) {
   .navbar {
@@ -837,6 +1025,7 @@ hr {
   .content_jeki {
     width: auto;
     height: 100vh;
+    min-width: 100vw;
     padding: 12px;
   }
 
@@ -892,11 +1081,14 @@ hr {
     align-items: center;
     justify-content: center;
     max-width: 100%;
-  } .img-container img:first-child{
+  }
+  .img-container img:first-child {
     width: 87px;
-  } .img-container_img-nya-02 {
+  }
+  .img-container_img-nya-02 {
     width: 160px;
-  } .img-container_img-nya-03 {
+  }
+  .img-container_img-nya-03 {
     margin-left: 12px;
     width: 80px;
   }
@@ -990,5 +1182,16 @@ hr {
     text-align: center;
     gap: 12px;
     font-size: x-small;
+  }
+
+  .kronologi-scroll-desktop {
+    display: block;
+    overflow-x: hidden;
+    height: auto;
+  }
+
+  .kronologi-scroll-desktop > section {
+    min-width: auto;
+    height: auto;
   }
 }

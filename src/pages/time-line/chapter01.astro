@@ -1,0 +1,97 @@
+---
+import "../../assets/styles/global.css";
+import Navbar from "../../components/BackNavbar.astro";
+import latar1 from "../../assets/img/latar-img1.png";
+import latar2 from "../../assets/img/latar-img2.png";
+import latar3 from "../../assets/img/latar-img3.png";
+import chapter01 from "/assets/videos/chapter01.mp4";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1997 - Awal 1998</title>
+  </head>
+  <body>
+    <Navbar />
+    <section id="section-3">
+      <div>
+        <div class="header_jeki h-screen">
+          <div class="hero_wrapper_jeki">
+            <p class="ch1_jeki">ch. 1</p>
+            <h1 class="year_jeki" data-aos="zoom-out">1997 – Awal 1998</h1>
+            <p class="subtitle_jeki">Krisis dan Awal Gelombang Protes</p>
+          </div>
+        </div>
+
+        <div class="content_jeki h-screen">
+          <div class="content_wrapper_jeki_spacing">
+            <p class="text_jeki text-kronologi">
+              Krisis moneter melanda Asia dan menghantam Indonesia.
+            </p>
+
+            <div class="images_jeki">
+              <div data-aos="fade-up-right" class="img-box_jeki">
+                <img src={latar1.src} alt="" />
+              </div>
+              <div data-aos="zoom-out" class="img-box_jeki">
+                <img src={latar2.src} alt="" />
+              </div>
+              <div data-aos="fade-up-left" class="img-box_jeki">
+                <img src={latar3.src} alt="" />
+              </div>
+            </div>
+
+            <p class="text_jeki text-kronologi">
+              Harga naik tajam, banyak PHK, dan mahasiswa mulai turun ke jalan
+              menuntut perubahan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Template Materi -->
+        <div class="materi_directed">
+          <div class="content_directed">
+            <h1 class="arges-font">“Awal Mula Krisis Moneter Melanda”</h1>
+
+            <p class="isi-materi">
+              Krisis moneter 1997-1998 di Indonesia adalah bencana ekonomi besar
+              yang dimulai dari krisis finansial Asia, ditandai merosotnya nilai
+              tukar rupiah drastis dari sekitar Rp2.500 menjadi lebih dari
+              Rp15.000 per dolar AS, disebabkan utang luar negeri besar-besaran,
+              kurangnya kepercayaan pasar, dan kebijakan pemerintah yang lamban,
+              mengakibatkan perusahaan bangkrut, pengangguran massal, kenaikan
+              harga barang pokok, kerusuhan sosial (Mei 1998), dan akhirnya
+              memicu kejatuhan Presiden Soeharto, menandai akhir Orde Baru.
+            </p>
+
+            <p class="isi-materi">
+              Awal mula krisis moneter 1998 dapat ditelusuri dari pertengahan
+              1997, ketika nilai tukar rupiah mulai melemah tajam akibat tekanan
+              finansial di kawasan Asia. Ketidakstabilan ini diperparah oleh
+              kurangnya kesiapan pemerintah menghadapi gejolak pasar, terutama
+              karena utang luar negeri swasta yang sangat besar. Dalam hitungan
+              bulan, harga-harga kebutuhan pokok melonjak, sektor industri
+              melemah, dan banyak perusahaan gulung tikar. Situasi ekonomi yang
+              memburuk memicu keresahan masyarakat, sementara kebijakan
+              pemerintah dianggap tidak cukup untuk meredam krisis. Kepercayaan
+              publik semakin tergerus, dan hubungan antara pemerintah serta
+              berbagai kelompok masyarakat mulai menegang. Krisis yang awalnya
+              bersifat finansial pun berubah menjadi krisis kepercayaan dan
+              politik yang mengguncang stabilitas nasional, membuka jalan bagi
+              gelombang protes besar-besaran yang mewarnai tahun 1998.
+            </p>
+
+            <section>
+              <div class="image-box chapter04-video">
+                <video src={chapter01} autoplay loop muted></video>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

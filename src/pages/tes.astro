@@ -1,1 +1,17 @@
-<h1>hello</h1>
+
+<button id="playBtn"> Putar / Pause </button>
+
+<script type="module">
+  import { initMusicPlayer } from "/scripts/musicPlayer.js";
+
+  console.log("⚡ Script Astro jalan di client!");
+
+  initMusicPlayer("../assets/sound/belumTentu.mp3");
+  document.getElementById("playBtn").addEventListener("click", () => {
+    if(window.toggleMusic) {
+      window.toggleMusic();
+    } else {
+      console.warn("Toggle music belum ada");
+    }
+  })
+</script>

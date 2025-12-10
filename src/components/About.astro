@@ -8,16 +8,22 @@ import latar4 from "../assets/img/latar-img4.png"
   <!-- Latar Belakang -->
   <section id="latar-belakang" class="px-16">
     <div class="main-latar">
-      <h1 class="mori-heading">Akar Perubahan: Krisis dan
+      <h1 class="mori-heading text-about">Akar Perubahan: Krisis dan
         Ketidakadilan yang Menyulut Reformasi</h1>
       <div class="img-container">
-        <img class="img-container_img-nya-01" src={latar2.src} alt="">
-        <img class="img-container_img-nya-02" src={latar1.src} alt="">
-        <img class="img-container_img-nya-03" src={latar3.src} alt="">
+        <div class="img-container_img-nya-01 img-about">
+          <img src={latar2.src} alt="">
+        </div>
+        <div class="img-container_img-nya-02 img-about">
+          <img src={latar1.src} alt="">
+        </div>
+        <div class="img-container_img-nya-03 img-about" >
+          <img src={latar3.src} alt="">
+        </div>
       </div>
       <!--  -->
       <div class="lb-paragraf">
-        <p class="mori-heading">Menjelang akhir dekade 1990-an, Indonesia
+        <p class="mori-heading text-about">Menjelang akhir dekade 1990-an, Indonesia
           menghadapi masa paling kelam dalam sejarah modernnya. Krisis moneter yang melanda Asia pada tahun
           1997 menghantam perekonomian nasional dengan keras. Nilai rupiah anjlok drastis, harga kebutuhan
           pokok melonjak, dan jutaan orang kehilangan pekerjaan.</p>
@@ -26,10 +32,10 @@ import latar4 from "../assets/img/latar-img4.png"
       <div class="lb-paragraf2">
         <img src={latar4.src} alt="">
         <div class="paragraf2-wrapper">
-          <p class="mori-heading">Di tengah krisis ekonomi yang mencekik, rakyat mulai
+          <p class="mori-heading text-about">Di tengah krisis ekonomi yang mencekik, rakyat mulai
             mempertanyakan arah kepemimpinan Orde Baru yang telah berkuasa selama lebih dari tiga dekade.
             Korupsi, kolusi, dan nepotisme merajalela, sementara kebebasan berpendapat dibungkam.</p>
-          <p class="mori-heading">Mahasiswa dari berbagai universitas di seluruh
+          <p class="mori-heading text-about">Mahasiswa dari berbagai universitas di seluruh
             Indonesia mulai turun ke jalan, menuntut reformasi total terhadap sistem pemerintahan. Mereka
             menyuarakan perubahan — bukan sekadar mengganti pemimpin, tetapi membangun tatanan yang lebih
             adil, transparan, dan demokratis.</p>
@@ -37,3 +43,47 @@ import latar4 from "../assets/img/latar-img4.png"
       </div>
     </div>
   </section>
+
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+      import { SplitText } from "gsap/SplitText";
+    gsap.registerPlugin(ScrollTrigger, SplitText);
+
+    const images = document.querySelectorAll(".img-about");
+    const texts = document.querySelectorAll(".text-about");
+
+    texts.forEach((text)=>{
+      const splitTexts = new SplitText(text, { type: "words" });
+  
+      gsap.from(splitTexts.words, {
+        y: 100,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: text,
+          start: "-90% 50%",
+          end: "10% 10%",
+          markers: false,
+          scrub: true,
+        }
+      })
+    })
+
+    // images.forEach((img)=>{
+    //   gsap.from(img, {
+    //     y: -1000,
+    //     duration: 1,
+    //     stagger: 0.3,
+    //     ease: "power2.out",
+    //     scrollTrigger: {
+    //       trigger: ".main-latar",
+    //       start: "top 20%",
+    //       end: "20% top",
+    //       markers: true,
+    //       scrub: true,
+    //     }
+    //   })
+    // })
+  </script>
